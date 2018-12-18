@@ -7,28 +7,22 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
-    let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
-    var finalURL = ""
+   let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
+   let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
+   var finalURL = ""
 
-    // IBOutlets
-    @IBOutlet weak var bitcoinPriceLabel: UILabel!
-    @IBOutlet weak var currencyPicker: UIPickerView!
+   // IBOutlets
+   @IBOutlet weak var bitcoinPriceLabel: UILabel!
+   @IBOutlet weak var currencyPicker: UIPickerView!
 
-    // View loads
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
+   // View loads
+   override func viewDidLoad() {
+      super.viewDidLoad()
 
-    
-    //TODO: Place your 3 UIPickerView delegate methods here
-    
-    
-    
+      currencyPicker.delegate = self
+      currencyPicker.dataSource = self
+   }
 
-    
-    
     
 //    
 //    //MARK: - Networking
