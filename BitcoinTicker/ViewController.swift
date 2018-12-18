@@ -44,9 +44,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
    
    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       finalURL = baseURL + currencyArray[row]
-      getBitcoinData(url: finalURL)
-      //bitcoinPriceLabel.text = bitcoinPriceLabel.text ?? " " + currencySymbolArray[row]
       currencySelected = currencySymbolArray[row]
+      getBitcoinData(url: finalURL)
+      
    }
    
    
