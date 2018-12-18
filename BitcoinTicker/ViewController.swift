@@ -58,14 +58,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
      Alamofire.request(url, method: .get)
       .responseJSON { response in
          if response.result.isSuccess {
-            // Debug
-            print("Sucess! Got the weather data")
+            // Debug: print("Sucess! Got the weather data")
             // Store JSON and Update data
             let bitcoinJSON : JSON = JSON(response.result.value!)
             self.updateBitcoinData(json: bitcoinJSON)
 
           } else { // Error Handling
-            print("Error: \(String(describing: response.result.error))")
+            // Debug: print("Error: \(String(describing: response.result.error))")
             self.bitcoinPriceLabel.text = "Connection Issues"
           }
       }
