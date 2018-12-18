@@ -66,7 +66,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
       }
    }
    
+   //MARK: - JSON Parsing
+   /***************************************************************/
 
+   func updateBitcoinData(json : JSON) {
+      if let bitcoinResult = json["ask"].double {
+         bitcoinPriceLabel.text = "\(bitcoinResult)"
+      } else {
+         bitcoinPriceLabel.text = "Price Unavailable"
+      }
+   }
    
 }
 
