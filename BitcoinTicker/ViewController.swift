@@ -17,10 +17,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
    @IBOutlet weak var bitcoinPriceLabel: UILabel!
    @IBOutlet weak var currencyPicker: UIPickerView!
 
-   // View loads
+   // View Loads (App Finishes Loading)
    override func viewDidLoad() {
       super.viewDidLoad()
 
+      // Currency Picker Config
       currencyPicker.delegate = self
       currencyPicker.dataSource = self
    }
@@ -41,7 +42,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
    
    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
       finalURL = baseURL + currencyArray[row]
-      print(finalURL)
+      getBitcoinData(url: finalURL)
    }
    
    
