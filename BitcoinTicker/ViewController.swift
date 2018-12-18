@@ -24,6 +24,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
    }
 
     
+   // UIPickerView delegate methods
+   func numberOfComponents(in pickerView: UIPickerView) -> Int {
+      return 1
+   }
+   
+   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+      return currencyArray.count
+   }
+   
+   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+      return currencyArray[row]
+   }
+   
+   
 //    
 //    //MARK: - Networking
 //    /***************************************************************/
