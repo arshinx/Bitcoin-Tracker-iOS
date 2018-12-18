@@ -76,7 +76,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
    func updateBitcoinData(json : JSON) {
       if let bitcoinResult = json["ask"].double {
-         bitcoinPriceLabel.text = "\(bitcoinResult)"
+         bitcoinPriceLabel.text = "\(currencySelected)\(bitcoinResult)"
       } else {
          bitcoinPriceLabel.text = "Price Unavailable"
       }
