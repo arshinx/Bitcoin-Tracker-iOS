@@ -45,7 +45,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
    }
    
    
-   //MARK: - Networking
+   // MARK: - Networking
    /***************************************************************/
 
    func getBitcoinData(url: String) {
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
       }
    }
    
-   //MARK: - JSON Parsing
+   // MARK: - JSON Parsing
    /***************************************************************/
 
    func updateBitcoinData(json : JSON) {
